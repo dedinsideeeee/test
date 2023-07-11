@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Maths Society</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>var ml = { timelines: {}};</script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFF
+    SUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html"><img src="images/tmsfp.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><p id="hover"> About <i class="fas fa-caret-down"></i></p>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="overview.html">Overview</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                            <li class="hover-me"><a href="schedules.html">Schedules</a>
+                                <!-- <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="december.html">Timetable</a></li>
+                                        <li><a href="real-calen.html">Calendar</a></li>
+                                </ul>
+                                </div> -->
+                            </li>
+                            <li><a href="teachers.html">Teachers</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="lesson.html">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+            <img id="menu-btn" src="images/hamburger.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+
+    <!-- <section id="home">
+        <h2>The Maths Society</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eligendi 
+            eaque molestias soluta molestiae cupiditate assumenda ipsam natus! Recusandae optio 
+            quo non corrupti itaque explicabo ex beatae eaque, ea dignissimos?</p>
+            <div class="btn">
+                <a class="blue" href="#">Learn More</a>
+                <a class="yellow" href="#">Visit Lessons</a>
+            </div>
+    </section> -->
+
+    <!-- Features -->
+
+    <section id="features">
+        <div class="moving-letters">
+            <h1 class="ml1">
+                <span class="letters">The Maths Society</span>
+            </h1>
+
+
+        <!--JavaScript-->
+
+            <script>
+                // Wrap every letter in a span
+                $('.ml1 .letters').each(function(){
+                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+                });
+                
+                ml.timelines["ml1"] = anime.timeline({loop: true})
+                .add({
+                    targets: '.ml1 .letter',
+                    scale: [0.3,1],
+                    opacity: [0,1],
+                    translateZ: 0,
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    delay: function(el, i) {
+                    return 70 * (i+1)
+                    } 
+                }).add({
+                    targets: '.ml1',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 800
+                });
+            </script>
+        </div>
+
+        <p>Everything you'll need to know about MATH!</p>
+        <div class="fea-base">
+            <div class="fea-box">
+                <a href="overview.html">
+                    <i class="fas fa-school"></i>
+                    <h3>Overview</h3>
+                    <p>A few facts about the Maths Society.</p>
+                </a>
+            </div>
+            <div class="fea-box">
+                <a href="schedules.html">
+                    <i class="far fa-calendar"></i>
+                    <h3>Schedules</h3>
+                    <p>Timetables and calendar of the Maths Society</p>
+                </a>
+            </div>
+            <div class="fea-box">
+                <a href="alumni.html">
+                    <i class="fas fa-award"></i>
+                    <h3>Alumni</h3>
+                    <p>Students that have finished from the Maths Society.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons -->
+<!-- 
+    <section id="lesson">
+        <a href="lesson.html"><h1>Lessons</h1></a>
+        <p>Join the lessons of The Maths Society!</p>
+        <div class="lesson">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xkb7AY0pXAo" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JpRKTOItRlI" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vQCQiYckAgs" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section> -->
+
+    <!-- Teachers -->
+    <section id="slideshow">
+        <div class="slide-container">
+            <div class="slides">    
+                <img src="images/IMG_1958.jpg" alt="" width="1126px" height="600px" class="active">
+                <img src="images/IMG_1959.jpg" alt="" width="1126px">
+                <img src="images/IMG_1960.jpg" alt="" width="1127px">
+                <img src="images/IMG_1961.jpg" alt="" width="1127px">
+                <img src="images/IMG_1962.jpg" alt="" width="1127px">
+            </div>
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+            <div class="dotsContainer">
+                <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+                <div class="dot" attr="1"onclick="switchImage(this)"></div>
+                <div class="dot" attr="2"onclick="switchImage(this)"></div>
+                <div class="dot" attr="3"onclick="switchImage(this)"></div>
+                <div class="dot" attr="4"onclick="switchImage(this)"></div>
+            </div>
+
+            <script type="text/javascript">
+                // Access the Images
+                let slideImages =  document.querySelectorAll('img');
+                // Access the next and prev buttons
+                let next = document.querySelector('.next');
+                let prev = document.querySelector('.prev');
+                // Access the indicators
+                let dots = document.querySelectorAll('.dot');
+    
+                var counter = 0;
+                
+                // Code for next button
+                next.addEventListener('click', slideNext);
+                function slideNext(){
+                    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+                    if(counter >= slideImages.length-1){
+                        counter = 0;
+                    }
+                    else{
+                        counter++;
+                    }
+                    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+                    indicators();
+                }
+                // Code for prev button
+                prev.addEventListener('click', slidePrev);
+                function slidePrev(){
+                    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                    if(counter == 0){
+                        counter = slideImages.length-1;
+                    }
+                    else{
+                        counter--;
+                    }
+                    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+                    indicators();
+                }
+                // Auto Sliding
+                function autoSliding(){
+                    deletInterval = setInterval(timer, 1000);
+                    function timer(){
+                        slideNext();
+                        indicators();
+                    }
+                }
+                autoSliding();
+    
+                // Stop auto sliding when mouse is over
+                const container = document.querySelector('.slide-container');
+                container.addEventListener('mouseover', funtion(){
+                    clearInterval(deletInterval);
+                });
+    
+                // Resume sliding when mouse is out
+                container.addEventListener('mouseout', autoSliding);
+
+                // Add and remove active class from the indicators
+                function indicators(){
+                    for(i = 0; i < dots.length; i++){
+                        dots[i].className = dots[i].className.replace(' active', '');
+                    }
+                    dots[counter].className += ' active';
+                }
+
+                // Add click event to the indicator
+                function switchImage(currentImage){
+                    currentImage.classList.add('active');
+                    var imageId = currentImage.getAttribute('attr');
+                    if(imageId > counter){
+                        slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+                        counter = imageId;
+                        slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+                    }
+                    else if(imageId == counter){
+                        return;
+                    }
+                    else{
+                        slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                        counter = imageId;
+                        indicators();
+                        slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+                    }
+                    indicators();
+                }
+            </script>
+                <!-- </div>
+                <div class="controls">
+                    <span class="arrow left"> <<< </span>
+                    <span class="arrow right"> >>> </span>
+                </div>
+            </div>
+            <script>
+                const slider = document.querySelector('.slider');
+
+                const leftArrow =  document.querySelector('.left');
+                const rightArrow =  document.querySelector('.right');
+
+                var sectionIndex = 0;
+
+                leftArrow.addEventListener('click', function(){
+                    sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
+                    slider.style.transform = 'translate(' + (sectionIndex) * -25 +'%)';
+                });
+
+                rightArrow.addEventListener('click', function(){
+                    sectionIndex = (sectionIndex < 4) ? sectionIndex + 1 : 4;
+                    slider.style.transform = 'translate(' + (sectionIndex) * -25 +'%)';
+                });
+            </script> -->
+        </div>
+    </section>
+        <!--<a href="teachers.html"><h1>Our Math Teachers</h1></a>
+        <p>Passionate, Caring, and Committed</p>
+        <div class="teacher-box">
+            <div class="profile">
+                <a href="teacher1.html"><img src="images/5.png" alt="">
+                <h6>Ms. Crystal</h6>
+                <p>Master of Science(Mathematics), University of Belfast, UK</p></a>
+            </div>
+            <div class="profile">
+                <a href="teacher2.html"><img src="images/2.png" alt="">
+                <h6>Ms. Wutt Hmone</h6>
+                <p>Currently attending at Singapore Institute of Management</p></a>
+            </div> -->
+<!-- 
+            <div class="profile">
+                <a href="teacher3.html"><img src="images/th66.png" width="140px" height="140px" alt="">
+                <h6>Ms. Theint</h6>
+                <p>Currently attending first year of Bachelor of Biomedical Science at Monash University</p></a>
+            </div> -->
+
+            <!-- <div class="profile">
+                <a href="teacher4.html"><img src="images/3.png" alt="">
+                <h6>Ms. Skye</h6>
+                <p></p></a>
+            </div>  
+        </div>
+    </section>-->
+    
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-col">
+            <h3>Userful Links</h3>
+            <li><a href="overview.html">About</a></li>
+            <li><a href="lesson.html">Lessons</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Address</h3>
+            <p>Yankin, Yangon, <br>Myanmar <br>Ph: (+95-9) 757 264 710 <br>Email: themathssociety@gmail.com</p>
+        </div>
+
+        <div class="footer-col-link">
+            <h3>Socials</h3>
+            <li><a href="https://www.facebook.com/profile.php?id=100076102009281"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC8bqTJJssHLlNIk-RjMMegg"><i class="fab fa-youtube"></i></a></li>
+        </div>
+    </footer>
+
+    <script>
+         $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        });
+
+        $('#menu-close').click(function(){
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+
+</body>
+</html>
